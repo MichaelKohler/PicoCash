@@ -52,3 +52,7 @@ a:focus {
 #index {
     height: 100%;
 }
+
+table .table-head {
+    font-weight: bold;
+}
