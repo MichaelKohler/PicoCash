@@ -7,16 +7,16 @@
                 <tr>
                     <td>Date</td>
                     <td>Name</td>
-                    <td>Amount</td>
+                    <td class="numberCell">Amount</td>
                     <td>Category</td>
                 </tr>
             </thead>
             <tbody>
                 {{#each transaction in controller}}
                     <tr>
-                        <td>{{transaction.createDate}}</td>
+                        <td>{{formatDate transaction.createDate}}</td>
                         <td>{{transaction.name}}</td>
-                        <td>{{transaction.amount}}</td>
+                        <td class="numberCell">{{formatAmount transaction.amount}}</td>
                         <td>{{transaction.category}}</td>
                     </tr>
                 {{/each}}

@@ -14,3 +14,11 @@ PicoCash.Router.map(function() {
     this.route("newTransaction");
     this.route("categories");
 });
+
+Ember.Handlebars.registerBoundHelper('formatDate', function(date){
+    return new Date(date).toLocaleString();
+});
+
+Ember.Handlebars.registerBoundHelper('formatAmount', function(number){
+    return number.toFixed(2).toLocaleString();
+});

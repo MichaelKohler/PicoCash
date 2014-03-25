@@ -56,3 +56,9 @@ a:focus {
 table .table-head {
     font-weight: bold;
 }
+
+.numberCell {
+    text-align: right;
+    border-spacing: 5em;
+    border-collapse: collapse;
+}
