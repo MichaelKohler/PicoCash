@@ -1,0 +1,25 @@
+<h1>Transactions ({{modelCount}})</h1>
+<table class="table table-striped">
+    <thead class="table-head">
+    <tr>
+        <td>Date</td>
+        <td>Name</td>
+        <td class="numberCell">Amount</td>
+        <td>Category</td>
+        <td>Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each transaction in controller}}
+        <tr>
+            <td>{{formatDate transaction.createDate}}</td>
+            <td>{{transaction.name}}</td>
+            <td class="numberCell">{{formatAmount transaction.amount}}</td>
+            <td {{bind-attr style=transaction.category.style}}>{{transaction.category.name}}</td>
+            <td>
+                <button class="btn btn-danger btn-xs" {{action 'deleteTransaction' transaction.id}}>x</button>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

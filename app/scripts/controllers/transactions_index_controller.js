@@ -1,4 +1,4 @@
-PicoCash.TransactionsController = Ember.ArrayController.extend({
+PicoCash.TransactionsIndexController = Ember.ArrayController.extend({
     modelCount: Ember.computed.alias('content.length'),
 
     actions: {
