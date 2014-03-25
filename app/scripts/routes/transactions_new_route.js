@@ -7,7 +7,7 @@ PicoCash.TransactionsNewRoute = Ember.Route.extend({
         var transactionNewController = this.controllerFor('transactions.new');
         if(Ember.isEmpty(transactionNewController.get('categories'))) {
             this.store.find('category').then(function(categories) {
-                transactionNewController.set('categories', categories)
+                transactionNewController.set('categories', categories);
             });
         }
     }
