@@ -14,13 +14,12 @@
             <div class="form-group">
                 <label>Category</label>
                 <select>
-                    <option>Please choose a category..</option>
-                    <option>Test1</option>
-                    <option>Test2</option>
-                    <option>Test3</option>
+                    {{#each category in controller}}
+                        <option>{{category.name}}</option>
+                    {{/each}}
                 </select>
             </div>
-            <button type="submit" class="btn btn-large btn-info">SUBMIT</button>
+            <button type="submit" class="btn btn-lg btn-info">SUBMIT</button>
         </form>
     </div>
 </div>

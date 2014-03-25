@@ -10,6 +10,7 @@ require('scripts/views/*');
 require('scripts/router');
 
 PicoCash.Router.map(function() {
+    this.route("transactions");
     this.route("newTransaction");
     this.route("categories");
 });
