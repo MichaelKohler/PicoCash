@@ -1,6 +1,11 @@
 PicoCash.Category = DS.Model.extend({
-    name:           DS.attr('string'),
-    color:          DS.attr('string')
+    name: DS.attr('string'),
+    color: DS.attr('string'),
+    transactions: DS.hasMany('transaction'),
+
+    style: function() {
+        return "color:" + this.get('color');
+    }.property('color')
 });
 
 PicoCash.Category.FIXTURES = [
@@ -17,6 +22,6 @@ PicoCash.Category.FIXTURES = [
     {
         id: 3,
         name: "Test",
-        color: "yellow"
+        color: "#0099ff"
     }
 ];

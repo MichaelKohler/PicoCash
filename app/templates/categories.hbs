@@ -6,6 +6,7 @@
             <thead class="table-head">
             <tr>
                 <td>Name</td>
+                <td>Color</td>
                 <td>Actions</td>
             </tr>
             </thead>
@@ -13,6 +14,7 @@
             {{#each category in controller}}
                 <tr>
                     <td>{{category.name}}</td>
+                    <td {{bind-attr style=category.style}}>{{category.color}}</td>
                     <td><button class="btn btn-danger btn-xs" {{action 'deleteCategory' category.id}}>x</button></td>
                 </tr>
             {{/each}}
