@@ -29,13 +29,12 @@ p {
 
 /* Links */
 a {
-    color: #3bc492;
+    color: #0b97c4;
     word-wrap: break-word;
 }
 
 a:hover,
 a:focus {
-    color: #c0392b;
     text-decoration: none;
     outline: 0;
 }

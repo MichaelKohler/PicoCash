@@ -13,7 +13,7 @@
             <tbody>
             {{#each category in controller}}
                 <tr>
-                    <td>{{category.name}}</td>
+                <td>{{#link-to 'category' category}}{{category.name}}{{/link-to}}</td>
                     <td {{bind-attr style=category.style}}>{{category.color}}</td>
                     <td><button class="btn btn-danger btn-xs" {{action 'deleteCategory' category.id}}>x</button></td>
                 </tr>

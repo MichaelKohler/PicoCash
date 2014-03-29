@@ -14,6 +14,7 @@ PicoCash.Router.map(function() {
         this.route("new");
     });
     this.route("categories");
+    this.route("category", { path: '/category/:category_id' });
 });
 
 Ember.Handlebars.registerBoundHelper('formatDate', function(date){
