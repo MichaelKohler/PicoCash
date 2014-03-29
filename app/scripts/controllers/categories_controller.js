@@ -6,6 +6,17 @@ PicoCash.CategoriesController = Ember.ArrayController.extend({
                 categoryToDelete.deleteRecord();
                 categoryToDelete.save();
             });
+        },
+        saveCategory: function() {
+            this.store.createRecord('category', {
+                name: this.get('name'),
+                color: this.get('color')
+            });
+            this.send('resetFields');
+        },
+        resetFields: function() {
+            this.set('name', '');
+            this.set('color', '');
         }
     }
 });
