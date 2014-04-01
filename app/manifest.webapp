@@ -1,0 +1,13 @@
+{
+  "name": "PicoCash",
+  "description": "Simply track your expenses",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/images/icon-128.png"
+  },
+  "developer": {
+    "name": "Michael Kohler",
+    "url": "http://www.picocash.co"
+  },
+  "default_locale": "en"
+}
