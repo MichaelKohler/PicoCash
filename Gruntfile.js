@@ -147,17 +147,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // not used since Uglify task does concat,
-        // but still available if needed
-        /*concat: {
-            dist: {}
-        },*/
-        // not enabled since usemin task does concat and uglify
-        // check index.html to edit your build targets
-        // enable this task if you prefer defining your build targets here
-        /*uglify: {
-            dist: {}
-        },*/
         rev: {
             dist: {
                 files: {
@@ -271,6 +260,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/*',
+                        'styles/*',
                         '*.webapp'
                     ]
                 }]
@@ -349,10 +339,9 @@ module.exports = function (grunt) {
         'clean:dist',
         'replace:dist',
         'useminPrepare',
+        'concat',
         'concurrent:dist',
         'neuter:app',
-        'concat',
-        'cssmin',
         'uglify',
         'copy',
         'rev',
