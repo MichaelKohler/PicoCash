@@ -3,7 +3,8 @@
   "version": "0.0.2",
   "dependencies": {
     "ember": "1.5.0",
-    "ember-data-shim": "1.0.0-beta.7"
+    "ember-data-shim": "1.0.0-beta.7",
+    "bootstrap": "3.1.1"
   },
   "devDependencies": {
     "ember-mocha-adapter": "0.2.0"
