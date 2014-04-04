@@ -339,10 +339,10 @@ module.exports = function (grunt) {
         'clean:dist',
         'replace:dist',
         'useminPrepare',
-        'concat',
         'concurrent:dist',
         'neuter:app',
         'uglify',
+        'concat',
         'copy',
         'rev',
         'usemin'
