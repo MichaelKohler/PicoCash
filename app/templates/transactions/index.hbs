@@ -15,7 +15,7 @@
             <td>{{formatDate transaction.createDate}}</td>
             <td {{bind-attr style=transaction.category.style}}>{{transaction.name}}</td>
             <td class="numberCell">{{formatAmount transaction.amount}}</td>
-            <td>{{#link-to 'category' transaction.category}}{{transaction.category.name}}{{/link-to}}</td>
+            <td>{{transaction.category.name}}</td>
             <td>
                 <button class="btn btn-danger btn-xs" {{action 'deleteTransaction' transaction.id}}>x</button>
             </td>
